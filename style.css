@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --font_lexend-deca: 'Lexend Deca', sans-serif;
+    --font_big-shoulders-display: 'Big Shoulders Display', cursive;
+
+    --color_bright-orange: hsl(31, 77%, 52%);
+    --color_dark-cyan: hsl(184, 100%, 22%);
+    --color_very-dark-cyan: hsl(179, 100%, 13%);
+
+    --color_transparent-whit_parafraphs: hsla(0, 0%, 100%, 0.75);
+    --color_very-light-gray_bg_headings_buttons: hsl(0, 0%, 95%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--font_lexend-deca);
+    font-size: 15px;
+    background-color: var(--color_very-light-gray_bg_headings_buttons);
+    color: var(--color_transparent-whit_parafraphs);
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 80px 25px;
+    overflow: hidden;
+}
+.section {
+    padding: 50px;
+}
+.header {
+    font-family: var(--font_big-shoulders-display);
+    color: var(--color_very-light-gray_bg_headings_buttons);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 30px 0px;
+}
+.description {
+    line-height: 1.5rem;
+}
+.button {
+    background-color: var(--color_very-light-gray_bg_headings_buttons);
+    color: black;
+    mix-blend-mode: lighten;
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
+    transition: background-color 0.2s;
+    margin-top: 30px;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+.button:hover {
+    background-color: black;
+    color: var(--color_very-light-gray_bg_headings_buttons);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.section__sedans {
+    background-color: var(--color_bright-orange);
+    mix-blend-mode: darken;
+}
+.section__suvs {
+    background-color: var(--color_dark-cyan);
+}
+.section__luxury {
+    background-color: var(--color_very-dark-cyan);
+}
+
+@media (min-width: 600px) {
+    .main {
+        flex-direction: row;
+    }
+    .button {
+        margin-top: 80px;
+    }
+    .section {
+        max-width: 210px;
+    }
+}
